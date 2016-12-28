@@ -7,7 +7,7 @@ import java.util.Date;
  * Created by lanling on 2016/12/27.
  */
 @Entity
-@Table(name = "tb_person")
+@Table(name = "tb_person", schema = "test2", catalog = "")
 public class Person {
 
     @Id
@@ -22,16 +22,6 @@ public class Person {
 
     private boolean married;
 
-    @Override
-    public String toString() {
-        return "Person{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", birth=" + birth +
-                ", gender=" + gender +
-                ", married=" + married +
-                '}';
-    }
 
     public int getId() {
         return id;
@@ -73,29 +63,10 @@ public class Person {
         this.married = married;
     }
 
-    public Person(int id, String name, Date birth, char gender, boolean married) {
-        this.name = name;
-        this.birth = birth;
-        this.gender = gender;
-        this.married = married;
-        this.id = id;
-    }
-
-
-    public Person(String name, Date birth, char gender, boolean married) {
-        this.name = name;
-        this.birth = birth;
-        this.gender = gender;
-        this.married = married;
-    }
-
-    public Person() {
-    }
 
     ///////////////////////////////////////////////////////////
     @OneToOne(mappedBy = "person")
     private IDCard idCard;
-
     public IDCard getIdCard() {
         return idCard;
     }
@@ -103,4 +74,5 @@ public class Person {
     public void setIdCard(IDCard idCard) {
         this.idCard = idCard;
     }
+
 }

@@ -129,3 +129,18 @@
          <bean class="org.springframework.web.multipart.commons.CommonsMultipartResolver" id="multipartResolver">
              <property name="maxUploadSize" value="5242880"/>
          </bean>
+         
+         
+### >5.注意
+       <!--hibernate的sessionFactory-->
+        <filter>
+          <filter-name>SpringOpenSessionInViewFilter</filter-name>
+          <filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+        </filter>
+        <filter-mapping>
+          <filter-name>SpringOpenSessionInViewFilter</filter-name>
+          <url-pattern>/*</url-pattern>
+        </filter-mapping>
+         
+         
+
