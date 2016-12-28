@@ -21,6 +21,12 @@
       <artifactId>hibernate-core</artifactId>
       <version>5.2.5.Final</version>
     </dependency>
+    <!--hibernate 二级缓存-->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-ehcache</artifactId>
+      <version>5.2.5.Final</version>
+    </dependency>
 
     <!--mysql 驱动-->
     <dependency>

@@ -1,25 +1,22 @@
 package com.ssh.entity;
 
+import com.ssh.service.DeptService;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-public class DeptTest {
+public class EntityTest {
 
     @Test
     public void fun() {
         ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        SessionFactory sessionFactory = (SessionFactory) act.getBean("sessionFactory");
-
-        Session session = sessionFactory.openSession();
-
-        Dept dept = new Dept(4,"dd","dd");
-
-        session.save(dept);
-
-        System.out.println(dept);
+//        DeptService deptService = act.getBean(DeptService.class);
+//
+//        for (Dept dept : deptService.findAll()) {
+//            System.out.println(dept);
+//        }
     }
 }
