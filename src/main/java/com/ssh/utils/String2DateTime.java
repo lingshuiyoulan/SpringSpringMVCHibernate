@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * Created by Administrator on 2016/12/15.
+ * Created by Lanling on 2016/12/15.
  */
 public class String2DateTime implements Converter<String, Date> {
 
